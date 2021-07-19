@@ -3,10 +3,10 @@
   "id": "modid",
   "version": "${version}",
 
-  "name": "Example Mod",
+  "name": "Oliver's Mod",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
-    "Me!"
+    "Olliejohnson"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
@@ -22,7 +22,7 @@
       "net.fabricmc.example.ExampleMod"
     ],
     "client": [
-      "net.fabricmc.example.ExampleModClient"
+      "net.fabricmc.example.client.ExampleModClient"
     ]
   },
   "mixins": [

@@ -1,10 +1,8 @@
 package net.fabricmc.example.blocks;
 
-import net.fabricmc.example.blockentities.BoxBlockEntity;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockEntityProvider;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.screen.NamedScreenHandlerFactory;
@@ -16,8 +14,7 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class BoxBlock extends Block implements BlockEntityProvider {
-
+public class BoxBlock extends BlockWithEntity {
     public BoxBlock(Settings settings) {
         super(settings);
     }
@@ -50,6 +47,7 @@ public class BoxBlock extends Block implements BlockEntityProvider {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof BoxBlockEntity) {
                 ItemScatterer.spawn(world, pos, (BoxBlockEntity)blockEntity);
+
                 world.updateComparators(pos, this);
             }
             super.onStateReplaced(state, world, pos, newState, moved);

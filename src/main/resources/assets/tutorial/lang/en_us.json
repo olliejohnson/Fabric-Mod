@@ -4,5 +4,6 @@
     "itemGroup.tutorial.modtab": "Mod Tab",
     "block.tutorial.example_block": "Example Block",
     "block.tutorial.demo_block": "Demo Block",
-    "item.tutorial.crop_seeds": "Crop Seeds"
+    "item.tutorial.crop_seeds": "Crop Seeds",
+    "enchantment.tutorial.useless": "Useless"
 }
